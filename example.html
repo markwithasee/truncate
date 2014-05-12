@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="jquery.truncate.js"></script>
+  <meta charset="utf-8">
+  <title>jQuery Truncate</title>
+  <style id="jsbin-css">
+    body {width: 300px; margin: 0 auto;}
+    .expanded {display: none;}
+    .more, .less {float:right; margin: 10px 0;}
+    .item {clear: both; margin: 30px 10px;}
+  </style>
+</head>
+
+<body>
+
+<div class="item">Lebowski ipsum near the In-and-Out Burger. Dolor sit amet, consectetur adipiscing elit praesent. You're just looking for a handout like every other. Are you employed, Mr. Lebowski? Ac magna justo pellentesque ac. Well sir, it's this rug I have, really tied the room together. Lectus quis elit blandit fringilla a. Since you have failed to achieve, even in the modest task that was your charge, since you have stolen my money, and since you have unrepentantly betrayed my trust. Ut turpis praesent felis ligula, malesuada suscipit malesuada non, ultrices non urna.</div>
+
+<div class="item">Bacon ipsum dolor sit amet pork fatback salami, short ribs t-bone brisket pig shankle shoulder hamburger andouille. Sausage kevin hamburger, biltong pork landjaeger kielbasa drumstick swine corned beef. T-bone kielbasa ham hock tri-tip turkey shank, pork flank bresaola. Bresaola capicola brisket pig shankle salami ground round frankfurter tongue pancetta venison shank. Shankle sirloin venison ham meatball. Shoulder biltong pancetta sausage pork loin. Tri-tip shoulder pork tenderloin, corned beef pork belly prosciutto chicken ham hock beef ribs swine pork loin biltong short loin.</div>
+
+<div class="item">The quick brown fox jumped over the lazy ass dog.</div>
+
+<div class="item">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit , morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</div>
+
+<script>
+  $(document).ready(function(){
+    // leave empty for default limit of 20 words, or define any integer:
+    $('.item').truncate(13);
+  });
+</script>
+
+</body>
+</html>
