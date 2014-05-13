@@ -13,7 +13,6 @@
 $.fn.truncate = function(limit) {
     
   var textLimit = (typeof limit === 'undefined') ? 20 : limit;
-  var thisClass = $(this).attr('class');
 		
   function shorten (text, limit, prepend, append) {
     if (typeof text !== 'string')
@@ -49,15 +48,16 @@ $.fn.truncate = function(limit) {
         append = moreLink + '</div><div class="expanded">' + fullText + ' ' + lessLink + '</div>',
         shortText = shorten(fullText, textLimit, prepend, append);
   
-    thisObj.html(shortText);
+    thisObj.addClass('expand-container')
+      .html(shortText)
+      .find('.less, .more').on('click',function(e){
+        e.preventDefault();
+        $(this).closest('.expand-container').find('.truncated, .expanded').toggle();
+      });
   
   });
-  
-  $('.'+thisClass).find('.more, .less').on('click',function(e){
-    e.preventDefault();
-    var item = $(this).parents('.'+thisClass);
-    item.find('.truncated, .expanded').toggle();
-  });
+ 
+  return this;
 
  };
  
