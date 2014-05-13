@@ -10,10 +10,14 @@
 
 (function($){
 	
-$.fn.truncate = function(limit) {
-    
-  var textLimit = (typeof limit === 'undefined') ? 20 : limit;
-		
+$.fn.truncate = function( options ) {  
+
+  var settings = $.extend({
+      limit: 20
+  }, options );
+
+  var textLimit = settings.limit;
+
   function shorten (text, limit, prepend, append) {
     if (typeof text !== 'string')
         return '';
