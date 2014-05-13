@@ -1,5 +1,5 @@
 /**
- * jquery.truncate.js v0.1.0
+ * jquery.truncate.js v0.2.0
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
